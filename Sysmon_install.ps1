@@ -8,8 +8,8 @@ New-Item -ItemType Directory -Force -Path $path
 $serviceName = 'sysmon64'
 If (-not(Get-Service $serviceName)){
 ### DL Sysmon
-invoke-webrequest "https://ewr1.vultrobjects.com/download/Sysmon64.exe" -OutFile C:\temp\Sysmon64.exe
-wget "https://ewr1.vultrobjects.com/download/sysmonconfig.xml" -OutFile C:\windows\sysmonconfig.xml 
+invoke-webrequest "https://s3.us-central-1.wasabisys.com/downloadsrts/onboarding/Sysmon64.exe" -OutFile C:\temp\Sysmon64.exe
+wget "https://s3.us-central-1.wasabisys.com/downloadsrts/onboarding/sysmonconfig.xml" -OutFile C:\windows\sysmonconfig.xml 
 # Install Sysmon
 C:\temp\Sysmon64.exe /accepteula -i c:\windows\sysmonconfig.xml
  }
