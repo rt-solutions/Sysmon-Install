@@ -12,4 +12,4 @@ invoke-webrequest "https://s3.us-central-1.wasabisys.com/downloadsrts/onboarding
 wget "https://s3.us-central-1.wasabisys.com/downloadsrts/onboarding/sysmonconfig.xml" -OutFile C:\windows\sysmonconfig.xml 
 # Install Sysmon
 C:\temp\Sysmon64.exe /accepteula -i c:\windows\sysmonconfig.xml
- }
+ }else{write-host -ForegroundColor green "Sysmon Installed"}
