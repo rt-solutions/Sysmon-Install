@@ -2,7 +2,6 @@
 # v1 4-15-23
 ### 
 $serviceName = 'sysmon64'
-
 $path = "C:\temp\"
 try {
     $Current_Version = (Get-Command C:\windows\sysmon64.exe).FileVersionInfo.ProductVersion
@@ -37,5 +36,5 @@ Write-host "Up to date, version" (Get-Command C:\windows\sysmon64.exe).FileVersi
 ### Cleanup
 rm C:\temp\sysmon*
 } else {
-    Write-Output "Sysmon up to date"
+    Write-Output "Sysmon is up to date"
 }
